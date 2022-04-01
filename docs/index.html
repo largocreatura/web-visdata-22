@@ -102,19 +102,19 @@
 		</div>
 		<section id="scrolly">
 			<div class="sticky-thing">
-				<p>0</p>
+				<!-- <p>0</p> -->
 			</div>
 			<article>
-				<div class="step" data-step="1">
+				<div class="step" data-step="1" data-url="url('img/img1.png')">
 					<p>El primer ejercicio que hicimos fue este</p>
 				</div>
-				<div class="step" data-step="2">
+				<div class="step" data-step="2" data-url="url('img/img2.png')">
 					<p>Después este</p>
 				</div>
-				<div class="step" data-step="3">
+				<div class="step" data-step="3" data-url="url('img/img1.png')">
 					<p>Y por último este otro</p>
 				</div>
-				<div class="step" data-step="4">
+				<div class="step" data-step="4" data-url="url('img/img1.png')">
 					<p>Recta final al TFM</p>
 				</div>
 			</article>
@@ -202,8 +202,9 @@
 			el.classList.add('is-active');
 
 			// Actualizar número de fondo basado en el número de step
-			sticky.querySelector("p").innerText = el.dataset.step;
+			//sticky.querySelector("p").innerText = el.dataset.step;
 			// sticky.style.backgroundColor = el.dataset.color;
+			sticky.style.backgroundImage = el.dataset.url;
 		}
 
 		// function setupStickyfill() {
